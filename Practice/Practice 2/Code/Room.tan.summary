@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.125 ns
+From           : ENTER
+To             : Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst2|inst4~2
+From Clock     : --
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.867 ns
+From           : Counter:inst|Edge_TFF:inst7|Edge_DFF:inst|First_DFF:inst2|inst4~6
+To             : CLOSE
+From Clock     : CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.003 ns
+From           : ENTER
+To             : CLOSE
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -2.002 ns
+From           : CLOCK
+To             : Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst2|inst4~2
+From Clock     : --
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 63.67 MHz ( period = 15.706 ns )
+From           : Counter:inst|Edge_TFF:inst11|Edge_DFF:inst|First_DFF:inst1|inst3~1
+To             : Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst2|inst4~2
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

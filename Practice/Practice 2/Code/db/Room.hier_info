@@ -1,0 +1,179 @@
+|Main_room
+OUTPUT_0 <= Counter:inst.OUTPUT_0
+CLOCK => Counter:inst.CLOCK
+OUT => inst3.IN0
+OUT => inst6.IN1
+T => inst17.IN1
+T => inst18.IN2
+ENTER => inst17.IN2
+ENTER => inst18.IN1
+INPUT => inst17.IN3
+INPUT => inst7.IN0
+INPUT => inst18.IN0
+CLEAR => Counter:inst.CLEAR
+OUTPUT_1 <= Counter:inst.OUTPUT_1
+OUTPUT_2 <= Counter:inst.OUTPUT_2
+OUTPUT_3 <= Counter:inst.OUTPUT_3
+CLOSE <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+OPEN <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst
+OUTPUT_0 <= Edge_TFF:inst.Q
+CLOCK => Edge_TFF:inst.CLOCK
+CLOCK => Edge_TFF:inst7.CLOCK
+CLOCK => Edge_TFF:inst11.CLOCK
+CLOCK => Edge_TFF:inst16.CLOCK
+ENABLE => Edge_TFF:inst.T_input
+ENABLE => inst5.IN0
+ENABLE => inst10.IN0
+ENABLE => inst15.IN0
+CLEAR => Edge_TFF:inst.CLEAR
+CLEAR => Edge_TFF:inst7.CLEAR
+CLEAR => Edge_TFF:inst11.CLEAR
+CLEAR => Edge_TFF:inst16.CLEAR
+OUTPUT_1 <= Edge_TFF:inst7.Q
+UP_DOWN => inst3.IN0
+UP_DOWN => inst1.IN1
+OUTPUT_2 <= Edge_TFF:inst11.Q
+OUTPUT_3 <= Edge_TFF:inst16.Q
+Is_full <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+is_null <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst
+Q_not <= Edge_DFF:inst.Q_not
+CLOCK => Edge_DFF:inst.CLOCK
+T_input => inst2.IN0
+CLEAR => inst1.IN1
+Q <= Edge_DFF:inst.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst|Edge_DFF:inst
+Q_not <= First_DFF:inst1.Q_not
+CLOCK => First_DFF:inst1.CLOCK
+CLOCK => inst.IN0
+D_input => First_DFF:inst2.D_input
+Q <= First_DFF:inst1.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst1
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst2
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst7
+Q_not <= Edge_DFF:inst.Q_not
+CLOCK => Edge_DFF:inst.CLOCK
+T_input => inst2.IN0
+CLEAR => inst1.IN1
+Q <= Edge_DFF:inst.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst7|Edge_DFF:inst
+Q_not <= First_DFF:inst1.Q_not
+CLOCK => First_DFF:inst1.CLOCK
+CLOCK => inst.IN0
+D_input => First_DFF:inst2.D_input
+Q <= First_DFF:inst1.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst7|Edge_DFF:inst|First_DFF:inst1
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst7|Edge_DFF:inst|First_DFF:inst2
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst11
+Q_not <= Edge_DFF:inst.Q_not
+CLOCK => Edge_DFF:inst.CLOCK
+T_input => inst2.IN0
+CLEAR => inst1.IN1
+Q <= Edge_DFF:inst.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst11|Edge_DFF:inst
+Q_not <= First_DFF:inst1.Q_not
+CLOCK => First_DFF:inst1.CLOCK
+CLOCK => inst.IN0
+D_input => First_DFF:inst2.D_input
+Q <= First_DFF:inst1.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst11|Edge_DFF:inst|First_DFF:inst1
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst11|Edge_DFF:inst|First_DFF:inst2
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst16
+Q_not <= Edge_DFF:inst.Q_not
+CLOCK => Edge_DFF:inst.CLOCK
+T_input => inst2.IN0
+CLEAR => inst1.IN1
+Q <= Edge_DFF:inst.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst16|Edge_DFF:inst
+Q_not <= First_DFF:inst1.Q_not
+CLOCK => First_DFF:inst1.CLOCK
+CLOCK => inst.IN0
+D_input => First_DFF:inst2.D_input
+Q <= First_DFF:inst1.Q
+
+
+|Main_room|Counter:inst|Edge_TFF:inst16|Edge_DFF:inst|First_DFF:inst1
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Main_room|Counter:inst|Edge_TFF:inst16|Edge_DFF:inst|First_DFF:inst2
+Q_not <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+CLOCK => inst1.IN0
+CLOCK => inst2.IN0
+D_input => inst1.IN1
+D_input => inst.IN0
+Q <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

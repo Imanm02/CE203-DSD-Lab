@@ -1,0 +1,135 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+First_DFF
+# storage
+db|Room.(0).cnf
+db|Room.(0).cnf
+# case_insensitive
+# source_file
+First_DFF.bdf
+ee739b90e0cf63d78ae9d1eafb2291e1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst1
+Counter:inst|Edge_TFF:inst|Edge_DFF:inst|First_DFF:inst2
+Counter:inst|Edge_TFF:inst7|Edge_DFF:inst|First_DFF:inst1
+Counter:inst|Edge_TFF:inst7|Edge_DFF:inst|First_DFF:inst2
+Counter:inst|Edge_TFF:inst11|Edge_DFF:inst|First_DFF:inst1
+Counter:inst|Edge_TFF:inst11|Edge_DFF:inst|First_DFF:inst2
+Counter:inst|Edge_TFF:inst16|Edge_DFF:inst|First_DFF:inst1
+Counter:inst|Edge_TFF:inst16|Edge_DFF:inst|First_DFF:inst2
+}
+# macro_sequence
+
+# end
+# entity
+Edge_DFF
+# storage
+db|Room.(1).cnf
+db|Room.(1).cnf
+# case_insensitive
+# source_file
+Edge_DFF.bdf
+52aab823ba6cb4768c0e3af4e6e7b7
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Counter:inst|Edge_TFF:inst|Edge_DFF:inst
+Counter:inst|Edge_TFF:inst7|Edge_DFF:inst
+Counter:inst|Edge_TFF:inst11|Edge_DFF:inst
+Counter:inst|Edge_TFF:inst16|Edge_DFF:inst
+}
+# macro_sequence
+
+# end
+# entity
+Edge_TFF
+# storage
+db|Room.(2).cnf
+db|Room.(2).cnf
+# case_insensitive
+# source_file
+Edge_TFF.bdf
+f0ac114ae155692b6268aac3cdcaa81
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Counter:inst|Edge_TFF:inst
+Counter:inst|Edge_TFF:inst7
+Counter:inst|Edge_TFF:inst11
+Counter:inst|Edge_TFF:inst16
+}
+# macro_sequence
+
+# end
+# entity
+Counter
+# storage
+db|Room.(3).cnf
+db|Room.(3).cnf
+# case_insensitive
+# source_file
+Counter.bdf
+6fc5f3c0e018d031116a4b353b92f768
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+Counter:inst
+}
+# macro_sequence
+
+# end
+# entity
+Main_room
+# storage
+db|Room.(4).cnf
+db|Room.(4).cnf
+# case_insensitive
+# source_file
+Main_room.bdf
+b1764a1da1de4fefb192beee4ae03faa
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
