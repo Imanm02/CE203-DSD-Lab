@@ -10,7 +10,7 @@ This repository contains solutions to the practices, course instructions, and ot
 - [Practice](#practice)
 - [Instructions](#instructions)
 - [Maintainer](#Maintainer)
-- 
+
 ## Practice
 
 The "Practice" folder contains the solutions to the practices that were given during the course.
