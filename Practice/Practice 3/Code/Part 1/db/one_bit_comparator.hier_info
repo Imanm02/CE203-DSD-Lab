@@ -1,0 +1,12 @@
+|one_bit_comparator
+x => LessThan0.IN1
+x => o_eq~0.IN0
+y => LessThan0.IN2
+y => o_eq~0.IN1
+in_gt => o_gt~1.IN1
+in_eq => o_gt~0.IN1
+in_eq => o_eq~1.IN0
+o_gt <= o_gt~1.DB_MAX_OUTPUT_PORT_TYPE
+o_eq <= o_eq~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

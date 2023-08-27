@@ -1,0 +1,13 @@
+|sequential_comparator
+x => LessThan1.IN1
+x => LessThan0.IN1
+y => LessThan1.IN2
+y => LessThan0.IN2
+reset => i_gt.IN0
+reset => i_lt.IN0
+clk => o_lt_not~0.IN0
+clk => o_lt~0.IN0
+clk => o_gt_not~0.IN1
+clk => o_gt~0.IN1
+
+
