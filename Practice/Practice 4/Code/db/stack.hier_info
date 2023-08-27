@@ -1,0 +1,45 @@
+|stack
+Clk => pointer[3].CLK
+Clk => pointer[2].CLK
+Clk => pointer[1].CLK
+Clk => pointer[0].CLK
+Clk => Data_Out[3]~reg0.CLK
+Clk => Data_Out[2]~reg0.CLK
+Clk => Data_Out[1]~reg0.CLK
+Clk => Data_Out[0]~reg0.CLK
+Clk => mem.data_a[0].CLK
+Clk => mem.data_a[1].CLK
+Clk => mem.data_a[2].CLK
+Clk => mem.data_a[3].CLK
+Clk => mem.waddr_a[0].CLK
+Clk => mem.waddr_a[1].CLK
+Clk => mem.waddr_a[2].CLK
+Clk => mem.we_a.CLK
+Clk => mem.CLK0
+RstN => comb~0.IN1
+RstN => pointer[3].ACLR
+RstN => pointer[2].ACLR
+RstN => pointer[1].ACLR
+RstN => pointer[0].ACLR
+RstN => Data_Out[0]~reg0.ENA
+RstN => Data_Out[3]~reg0.ENA
+RstN => Data_Out[2]~reg0.ENA
+RstN => Data_Out[1]~reg0.ENA
+Data_In[0] => mem.data_a[0].DATAIN
+Data_In[0] => mem.DATAIN
+Data_In[1] => mem.data_a[1].DATAIN
+Data_In[1] => mem.DATAIN1
+Data_In[2] => mem.data_a[2].DATAIN
+Data_In[2] => mem.DATAIN2
+Data_In[3] => mem.data_a[3].DATAIN
+Data_In[3] => mem.DATAIN3
+Push => always0~0.IN1
+Pop => always0~1.IN1
+Data_Out[0] <= Data_Out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Data_Out[1] <= Data_Out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Data_Out[2] <= Data_Out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Data_Out[3] <= Data_Out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Full <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+Empty <= WideNor1.DB_MAX_OUTPUT_PORT_TYPE
+
+

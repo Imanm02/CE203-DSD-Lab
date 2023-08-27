@@ -1,0 +1,118 @@
+Flow report for stack
+Mon Aug 14 00:04:21 2023
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Flow Summary                                                            ;
++-------------------------------+-----------------------------------------+
+; Flow Status                   ; Flow Failed - Mon Aug 14 00:04:21 2023  ;
+; Quartus II Version            ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name                 ; stack                                   ;
+; Top-level Entity Name         ; stack_test_bench                        ;
+; Family                        ; Stratix II                              ;
+; Met timing requirements       ; N/A                                     ;
+; Logic utilization             ; N/A until Partition Merge               ;
+;     Combinational ALUTs       ; N/A until Partition Merge               ;
+;     Dedicated logic registers ; N/A until Partition Merge               ;
+; Total registers               ; N/A until Partition Merge               ;
+; Total pins                    ; N/A until Partition Merge               ;
+; Total virtual pins            ; N/A until Partition Merge               ;
+; Total block memory bits       ; N/A until Partition Merge               ;
+; DSP block 9-bit elements      ; N/A until Partition Merge               ;
+; Total PLLs                    ; N/A until Partition Merge               ;
+; Total DLLs                    ; N/A until Partition Merge               ;
++-------------------------------+-----------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 08/14/2023 00:04:21 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; stack               ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++--------------------------------------+---------------------------------+---------------+------------------+------------------+
+; Assignment Name                      ; Value                           ; Default Value ; Entity Name      ; Section Id       ;
++--------------------------------------+---------------------------------+---------------+------------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 149890843528584.169195886109288 ; --            ; --               ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; stack_test_bench                ; --            ; --               ; stack_test_bench ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; stack_test_bench                ; --            ; --               ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                     ; --            ; --               ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)       ; <None>        ; --               ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                 ; --            ; --               ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; stack_test_bench.v              ; --            ; --               ; stack_test_bench ;
+; EDA_TEST_BENCH_MODULE_NAME           ; stack_test_bench                ; --            ; --               ; stack_test_bench ;
+; EDA_TEST_BENCH_NAME                  ; stack_test_bench                ; --            ; --               ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                            ; --            ; --               ; eda_simulation   ;
+; PARTITION_COLOR                      ; 16764057                        ; --            ; stack_test_bench ; Top              ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                          ; --            ; stack_test_bench ; Top              ;
+; TOP_LEVEL_ENTITY                     ; stack_test_bench                ; stack         ; --               ; --               ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS   ; Off                             ; --            ; --               ; eda_blast_fpga   ;
++--------------------------------------+---------------------------------+---------------+------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:01                           ;
+; Total                ; 00:00:00     ; --                      ; --                  ; 00:00:01                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++----------------------+------------------+---------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++----------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-23OE1PM  ; Windows Vista ; 6.2        ; x86_64         ;
++----------------------+------------------+---------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off stack -c stack
+
+
+
