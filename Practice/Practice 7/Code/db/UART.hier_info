@@ -1,0 +1,31 @@
+|TopLevel
+sys_clk => sys_clk~0.IN1
+rx => rx~0.IN1
+data_out[0] <= UART_Receiver:u1.data_out
+data_out[1] <= UART_Receiver:u1.data_out
+data_out[2] <= UART_Receiver:u1.data_out
+data_out[3] <= UART_Receiver:u1.data_out
+data_out[4] <= UART_Receiver:u1.data_out
+data_out[5] <= UART_Receiver:u1.data_out
+data_out[6] <= UART_Receiver:u1.data_out
+ready <= UART_Receiver:u1.ready
+
+
+|TopLevel|UART_Receiver:u1
+rx => ready~0.DATAB
+rx => shift_reg[0].DATAIN
+rx => always1~0.IN0
+rx => next_state~3.OUTPUTSELECT
+rx => next_state~2.OUTPUTSELECT
+rx => next_state~1.OUTPUTSELECT
+rx => next_state~0.OUTPUTSELECT
+data_out[0] <= shift_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= shift_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= shift_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= shift_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= shift_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= shift_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= shift_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+ready <= ready~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

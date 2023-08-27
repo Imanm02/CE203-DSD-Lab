@@ -1,0 +1,7 @@
+
+State Machine - |TopLevel|UART_Receiver:u1|state
+Name state.CHECK_STOP state.CHECK_PARITY state.RECEIVE state.WAIT_START 
+state.WAIT_START 0 0 0 0 
+state.RECEIVE 0 0 1 1 
+state.CHECK_PARITY 0 1 0 1 
+state.CHECK_STOP 1 0 0 1 

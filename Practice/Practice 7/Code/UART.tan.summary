@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 4.415 ns
+From           : rx
+To             : UART_Receiver:u1|state.WAIT_START
+From Clock     : --
+To Clock       : sys_clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.918 ns
+From           : UART_Receiver:u1|shift_reg[1]
+To             : data_out[1]
+From Clock     : sys_clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.535 ns
+From           : rx
+To             : ready
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.269 ns
+From           : rx
+To             : UART_Receiver:u1|shift_reg[0]
+From Clock     : --
+To Clock       : sys_clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'sys_clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 94.79 MHz ( period = 10.550 ns )
+From           : UART_Receiver:u1|shift_reg[2]
+To             : UART_Receiver:u1|state.WAIT_START
+From Clock     : sys_clk
+To Clock       : sys_clk
+Failed Paths   : 0
+
+Type           : Clock Hold: 'sys_clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : UART_Receiver:u1|state.RECEIVE
+To             : UART_Receiver:u1|bit_counter[2]
+From Clock     : sys_clk
+To Clock       : sys_clk
+Failed Paths   : 3
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 3
+
+--------------------------------------------------------------------------------------
+

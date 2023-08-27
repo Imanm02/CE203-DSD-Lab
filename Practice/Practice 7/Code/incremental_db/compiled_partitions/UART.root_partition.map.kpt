@@ -1,0 +1,202 @@
+<kpt_db name="UART.map_bb" kpt_version="1.1">
+  <key_points_set type="reference" hier_sep="/">
+    <key_point id="1" type="register">
+      <name>u1/state[2]</name>
+    </key_point>
+    <key_point id="2" type="register">
+      <name>u1/state[0]</name>
+    </key_point>
+    <key_point id="3" type="register">
+      <name>u1/state[1]</name>
+    </key_point>
+    <key_point id="4" type="register">
+      <name>u1/state~7</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="5" type="register">
+      <name>u1/state~5</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="6" type="register">
+      <name>u1/state~6</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_ELIM_STAT_">NF</attribute>
+      </attributes_list>
+    </key_point>
+  </key_points_set>
+  <key_points_set type="transition" hier_sep="|">
+    <key_point id="7" type="register">
+      <name>UART_Receiver:u1|state.RECEIVE</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_KPSET_">S</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="8" type="register">
+      <name>UART_Receiver:u1|state.WAIT_START</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_KPSET_">S</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="9" type="register">
+      <name>UART_Receiver:u1|state.CHECK_STOP</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_KPSET_">S</attribute>
+      </attributes_list>
+    </key_point>
+    <key_point id="10" type="register">
+      <name>UART_Receiver:u1|state.CHECK_PARITY</name>
+      <attributes_list>
+        <attribute name="_KPT_INT_KPSET_">S</attribute>
+      </attributes_list>
+    </key_point>
+  </key_points_set>
+  <key_points_set type="transformed" hier_sep="|">
+    <key_point id="11" type="register">
+      <name>UART_Receiver:u1|state.RECEIVE</name>
+    </key_point>
+    <key_point id="12" type="register">
+      <name>UART_Receiver:u1|state.WAIT_START</name>
+    </key_point>
+    <key_point id="13" type="register">
+      <name>UART_Receiver:u1|state.CHECK_STOP</name>
+    </key_point>
+    <key_point id="14" type="register">
+      <name>UART_Receiver:u1|state.CHECK_PARITY</name>
+    </key_point>
+  </key_points_set>
+  <transformations_set hier_sep="|">
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="8" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="12" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="9" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="13" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="1" type="proxy"></kp>
+        </kp_state>
+        <kp_state index="1">
+          <kp id="3" type="proxy"></kp>
+        </kp_state>
+        <kp_state index="2">
+          <kp id="2" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="9" type="proxy"></kp>
+        </kp_state>
+        <kp_state index="1">
+          <kp id="10" type="proxy"></kp>
+        </kp_state>
+        <kp_state index="2">
+          <kp id="7" type="proxy"></kp>
+        </kp_state>
+        <kp_state index="3">
+          <kp id="8" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    <state_table type="lookup" fsm_name="u1/state" num_states="4" num_reference_cols="3" num_transformed_cols="4">
+      <state index="0" state_name="u1/state.WAIT_START">
+        <reference>
+          <value index="0">0</value>
+          <value index="1">0</value>
+          <value index="2">0</value>
+        </reference>
+        <transformed>
+          <value index="0">0</value>
+          <value index="1">0</value>
+          <value index="2">0</value>
+          <value index="3">0</value>
+        </transformed>
+      </state>
+      <state index="1" state_name="u1/state.RECEIVE">
+        <reference>
+          <value index="0">0</value>
+          <value index="1">0</value>
+          <value index="2">1</value>
+        </reference>
+        <transformed>
+          <value index="0">0</value>
+          <value index="1">0</value>
+          <value index="2">1</value>
+          <value index="3">1</value>
+        </transformed>
+      </state>
+      <state index="2" state_name="u1/state.CHECK_PARITY">
+        <reference>
+          <value index="0">0</value>
+          <value index="1">1</value>
+          <value index="2">0</value>
+        </reference>
+        <transformed>
+          <value index="0">0</value>
+          <value index="1">1</value>
+          <value index="2">0</value>
+          <value index="3">1</value>
+        </transformed>
+      </state>
+      <state index="3" state_name="u1/state.CHECK_STOP">
+        <reference>
+          <value index="0">0</value>
+          <value index="1">1</value>
+          <value index="2">1</value>
+        </reference>
+        <transformed>
+          <value index="0">1</value>
+          <value index="1">0</value>
+          <value index="2">0</value>
+          <value index="3">1</value>
+        </transformed>
+      </state>
+    </state_table>
+  </transformation>
+  <transformation>
+    <kp_set type="reference">
+      <kp_state index="0">
+        <kp id="7" type="proxy"></kp>
+      </kp_state>
+    </kp_set>
+    <kp_set type="transformed">
+      <kp_state index="0">
+        <kp id="11" type="proxy"></kp>
+      </kp_state>
+    </kp_set>
+  </transformation>
+  <transformation>
+    <kp_set type="reference">
+      <kp_state index="0">
+        <kp id="10" type="proxy"></kp>
+      </kp_state>
+    </kp_set>
+    <kp_set type="transformed">
+      <kp_state index="0">
+        <kp id="14" type="proxy"></kp>
+      </kp_state>
+    </kp_set>
+  </transformation>
+</transformations_set>
+</kpt_db>
