@@ -1,0 +1,432 @@
+Classic Timing Analyzer report for Multiplier
+Sun Aug 27 03:25:29 2023
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                     ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                               ; To                                                    ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.396 ns                         ; str                                                ; BoothMultiplierControlUnit:control|counter[0]         ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.669 ns                         ; BoothMultiplierDatapath:datapath|new_multiplier[2] ; result[2]                                             ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.493 ns                        ; multiplicand[2]                                    ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 148.13 MHz ( period = 6.751 ns ) ; BoothMultiplierDatapath:datapath|new_multiplier[2] ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                    ;                                                       ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------------+-------------------------------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                                                                 ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                  ; To                                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 148.13 MHz ( period = 6.751 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 6.512 ns                ;
+; N/A   ; 148.35 MHz ( period = 6.741 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 6.502 ns                ;
+; N/A   ; 153.14 MHz ( period = 6.530 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 6.291 ns                ;
+; N/A   ; 153.37 MHz ( period = 6.520 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 6.281 ns                ;
+; N/A   ; 154.04 MHz ( period = 6.492 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 6.253 ns                ;
+; N/A   ; 158.03 MHz ( period = 6.328 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 6.089 ns                ;
+; N/A   ; 158.28 MHz ( period = 6.318 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 6.079 ns                ;
+; N/A   ; 158.45 MHz ( period = 6.311 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 6.071 ns                ;
+; N/A   ; 158.53 MHz ( period = 6.308 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 6.068 ns                ;
+; N/A   ; 159.46 MHz ( period = 6.271 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 6.032 ns                ;
+; N/A   ; 160.10 MHz ( period = 6.246 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 6.006 ns                ;
+; N/A   ; 161.92 MHz ( period = 6.176 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 5.937 ns                ;
+; N/A   ; 162.18 MHz ( period = 6.166 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 5.927 ns                ;
+; N/A   ; 163.24 MHz ( period = 6.126 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 5.887 ns                ;
+; N/A   ; 164.20 MHz ( period = 6.090 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 5.850 ns                ;
+; N/A   ; 164.28 MHz ( period = 6.087 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 5.847 ns                ;
+; N/A   ; 164.77 MHz ( period = 6.069 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 5.830 ns                ;
+; N/A   ; 165.98 MHz ( period = 6.025 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 5.785 ns                ;
+; N/A   ; 167.90 MHz ( period = 5.956 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 5.718 ns                ;
+; N/A   ; 168.18 MHz ( period = 5.946 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 5.708 ns                ;
+; N/A   ; 169.00 MHz ( period = 5.917 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 5.678 ns                ;
+; N/A   ; 169.35 MHz ( period = 5.905 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 5.666 ns                ;
+; N/A   ; 169.84 MHz ( period = 5.888 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 5.648 ns                ;
+; N/A   ; 169.92 MHz ( period = 5.885 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 5.645 ns                ;
+; N/A   ; 171.73 MHz ( period = 5.823 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 5.583 ns                ;
+; N/A   ; 171.76 MHz ( period = 5.822 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 5.584 ns                ;
+; N/A   ; 172.06 MHz ( period = 5.812 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 5.574 ns                ;
+; N/A   ; 174.34 MHz ( period = 5.736 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 5.496 ns                ;
+; N/A   ; 174.43 MHz ( period = 5.733 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 5.493 ns                ;
+; N/A   ; 175.35 MHz ( period = 5.703 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 5.464 ns                ;
+; N/A   ; 175.53 MHz ( period = 5.697 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 5.459 ns                ;
+; N/A   ; 176.34 MHz ( period = 5.671 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 5.431 ns                ;
+; N/A   ; 176.77 MHz ( period = 5.657 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 5.423 ns                ;
+; N/A   ; 179.76 MHz ( period = 5.563 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 5.325 ns                ;
+; N/A   ; 180.15 MHz ( period = 5.551 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 5.312 ns                ;
+; N/A   ; 181.29 MHz ( period = 5.516 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 5.277 ns                ;
+; N/A   ; 181.39 MHz ( period = 5.513 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 5.274 ns                ;
+; N/A   ; 183.02 MHz ( period = 5.464 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 5.226 ns                ;
+; N/A   ; 183.35 MHz ( period = 5.454 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 5.216 ns                ;
+; N/A   ; 183.45 MHz ( period = 5.451 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 5.212 ns                ;
+; N/A   ; 183.96 MHz ( period = 5.436 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 5.202 ns                ;
+; N/A   ; 185.80 MHz ( period = 5.382 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 5.143 ns                ;
+; N/A   ; 185.91 MHz ( period = 5.379 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 5.140 ns                ;
+; N/A   ; 187.58 MHz ( period = 5.331 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 5.093 ns                ;
+; N/A   ; 187.90 MHz ( period = 5.322 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 5.082 ns                ;
+; N/A   ; 188.08 MHz ( period = 5.317 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 5.078 ns                ;
+; N/A   ; 190.77 MHz ( period = 5.242 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 5.002 ns                ;
+; N/A   ; 191.06 MHz ( period = 5.234 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 5.000 ns                ;
+; N/A   ; 192.12 MHz ( period = 5.205 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 4.967 ns                ;
+; N/A   ; 192.42 MHz ( period = 5.197 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 4.959 ns                ;
+; N/A   ; 196.04 MHz ( period = 5.101 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 4.861 ns                ;
+; N/A   ; 196.77 MHz ( period = 5.082 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 4.848 ns                ;
+; N/A   ; 199.04 MHz ( period = 5.024 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 4.785 ns                ;
+; N/A   ; 199.16 MHz ( period = 5.021 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 4.781 ns                ;
+; N/A   ; 199.16 MHz ( period = 5.021 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 4.782 ns                ;
+; N/A   ; 201.65 MHz ( period = 4.959 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 4.720 ns                ;
+; N/A   ; 204.12 MHz ( period = 4.899 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 4.659 ns                ;
+; N/A   ; 205.68 MHz ( period = 4.862 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 4.629 ns                ;
+; N/A   ; 206.65 MHz ( period = 4.839 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 4.601 ns                ;
+; N/A   ; 207.51 MHz ( period = 4.819 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 4.579 ns                ;
+; N/A   ; 210.66 MHz ( period = 4.747 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 4.507 ns                ;
+; N/A   ; 211.51 MHz ( period = 4.728 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 4.495 ns                ;
+; N/A   ; 212.40 MHz ( period = 4.708 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 4.468 ns                ;
+; N/A   ; 214.27 MHz ( period = 4.667 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 4.427 ns                ;
+; N/A   ; 220.90 MHz ( period = 4.527 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 4.288 ns                ;
+; N/A   ; 222.57 MHz ( period = 4.493 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 4.260 ns                ;
+; N/A   ; 222.57 MHz ( period = 4.493 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 4.260 ns                ;
+; N/A   ; 222.87 MHz ( period = 4.487 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 4.247 ns                ;
+; N/A   ; 224.87 MHz ( period = 4.447 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 4.208 ns                ;
+; N/A   ; 227.63 MHz ( period = 4.393 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 4.154 ns                ;
+; N/A   ; 228.83 MHz ( period = 4.370 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 4.137 ns                ;
+; N/A   ; 231.86 MHz ( period = 4.313 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 4.074 ns                ;
+; N/A   ; 233.37 MHz ( period = 4.285 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 4.045 ns                ;
+; N/A   ; 238.15 MHz ( period = 4.199 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 3.965 ns                ;
+; N/A   ; 238.32 MHz ( period = 4.196 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 3.958 ns                ;
+; N/A   ; 238.44 MHz ( period = 4.194 ns )               ; BoothMultiplierDatapath:datapath|LSB                  ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.949 ns                ;
+; N/A   ; 239.35 MHz ( period = 4.178 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.939 ns                ;
+; N/A   ; 241.95 MHz ( period = 4.133 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 3.893 ns                ;
+; N/A   ; 242.60 MHz ( period = 4.122 ns )               ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 3.888 ns                ;
+; N/A   ; 247.83 MHz ( period = 4.035 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 3.796 ns                ;
+; N/A   ; 252.84 MHz ( period = 3.955 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 3.716 ns                ;
+; N/A   ; 253.23 MHz ( period = 3.949 ns )               ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 3.711 ns                ;
+; N/A   ; 254.13 MHz ( period = 3.935 ns )               ; BoothMultiplierDatapath:datapath|LSB                  ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 3.696 ns                ;
+; N/A   ; 255.56 MHz ( period = 3.913 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 3.674 ns                ;
+; N/A   ; 264.62 MHz ( period = 3.779 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 3.540 ns                ;
+; N/A   ; 272.11 MHz ( period = 3.675 ns )               ; BoothMultiplierDatapath:datapath|LSB                  ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A   ; 272.11 MHz ( period = 3.675 ns )               ; BoothMultiplierDatapath:datapath|LSB                  ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 3.436 ns                ;
+; N/A   ; 274.12 MHz ( period = 3.648 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 3.404 ns                ;
+; N/A   ; 275.71 MHz ( period = 3.627 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 3.383 ns                ;
+; N/A   ; 275.94 MHz ( period = 3.624 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 3.380 ns                ;
+; N/A   ; 277.32 MHz ( period = 3.606 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 3.362 ns                ;
+; N/A   ; 280.66 MHz ( period = 3.563 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 3.319 ns                ;
+; N/A   ; 283.21 MHz ( period = 3.531 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 3.287 ns                ;
+; N/A   ; 287.36 MHz ( period = 3.480 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 3.236 ns                ;
+; N/A   ; 290.19 MHz ( period = 3.446 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.201 ns                ;
+; N/A   ; 292.31 MHz ( period = 3.421 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 3.182 ns                ;
+; N/A   ; 293.43 MHz ( period = 3.408 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.164 ns                ;
+; N/A   ; 297.27 MHz ( period = 3.364 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.119 ns                ;
+; N/A   ; 301.02 MHz ( period = 3.322 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 3.077 ns                ;
+; N/A   ; 302.11 MHz ( period = 3.310 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 3.066 ns                ;
+; N/A   ; 302.39 MHz ( period = 3.307 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 3.063 ns                ;
+; N/A   ; 303.12 MHz ( period = 3.299 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A   ; 303.12 MHz ( period = 3.299 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 3.061 ns                ;
+; N/A   ; 303.49 MHz ( period = 3.295 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 3.056 ns                ;
+; N/A   ; 308.07 MHz ( period = 3.246 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 3.003 ns                ;
+; N/A   ; 308.07 MHz ( period = 3.246 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 3.003 ns                ;
+; N/A   ; 310.08 MHz ( period = 3.225 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 2.987 ns                ;
+; N/A   ; 310.08 MHz ( period = 3.225 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.986 ns                ;
+; N/A   ; 310.37 MHz ( period = 3.222 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 2.978 ns                ;
+; N/A   ; 311.82 MHz ( period = 3.207 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 2.963 ns                ;
+; N/A   ; 312.01 MHz ( period = 3.205 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.972 ns                ;
+; N/A   ; 314.56 MHz ( period = 3.179 ns )               ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 2.935 ns                ;
+; N/A   ; 314.76 MHz ( period = 3.177 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.938 ns                ;
+; N/A   ; 316.06 MHz ( period = 3.164 ns )               ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 2.925 ns                ;
+; N/A   ; 317.56 MHz ( period = 3.149 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.911 ns                ;
+; N/A   ; 321.96 MHz ( period = 3.106 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.868 ns                ;
+; N/A   ; 325.41 MHz ( period = 3.073 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.840 ns                ;
+; N/A   ; 334.45 MHz ( period = 2.990 ns )               ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 2.752 ns                ;
+; N/A   ; 335.12 MHz ( period = 2.984 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 2.740 ns                ;
+; N/A   ; 335.80 MHz ( period = 2.978 ns )               ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 2.739 ns                ;
+; N/A   ; 336.93 MHz ( period = 2.968 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.730 ns                ;
+; N/A   ; 343.64 MHz ( period = 2.910 ns )               ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.677 ns                ;
+; N/A   ; 344.71 MHz ( period = 2.901 ns )               ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.668 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; BoothMultiplierControlUnit:control|counter[0]         ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 2.646 ns                ;
+; N/A   ; 358.17 MHz ( period = 2.792 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 2.554 ns                ;
+; N/A   ; 364.03 MHz ( period = 2.747 ns )               ; BoothMultiplierControlUnit:control|counter[1]         ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 2.514 ns                ;
+; N/A   ; 367.51 MHz ( period = 2.721 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.483 ns                ;
+; N/A   ; 369.00 MHz ( period = 2.710 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 2.467 ns                ;
+; N/A   ; 369.00 MHz ( period = 2.710 ns )               ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 2.467 ns                ;
+; N/A   ; 370.10 MHz ( period = 2.702 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 2.464 ns                ;
+; N/A   ; 370.10 MHz ( period = 2.702 ns )               ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 2.464 ns                ;
+; N/A   ; 370.51 MHz ( period = 2.699 ns )               ; BoothMultiplierDatapath:datapath|result[2]            ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.460 ns                ;
+; N/A   ; 371.89 MHz ( period = 2.689 ns )               ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk        ; clk      ; None                        ; None                      ; 2.451 ns                ;
+; N/A   ; 373.41 MHz ( period = 2.678 ns )               ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.440 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|counter[2]         ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 2.351 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.317 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|temp_multiplicand[3] ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.310 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 2.315 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 2.311 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.240 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk        ; clk      ; None                        ; None                      ; 2.208 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 2.182 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 2.182 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 2.160 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 2.157 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 2.124 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk        ; clk      ; None                        ; None                      ; 2.124 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 2.092 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 2.068 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[1]            ; BoothMultiplierDatapath:datapath|result[2]            ; clk        ; clk      ; None                        ; None                      ; 1.889 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierDatapath:datapath|result[0]            ; clk        ; clk      ; None                        ; None                      ; 1.861 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[0]            ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk        ; clk      ; None                        ; None                      ; 1.676 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierControlUnit:control|counter[1]         ; clk        ; clk      ; None                        ; None                      ; 1.625 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierControlUnit:control|counter[2]         ; clk        ; clk      ; None                        ; None                      ; 1.625 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierControlUnit:control|counter[0]         ; clk        ; clk      ; None                        ; None                      ; 1.625 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 1.567 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 1.461 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|result[3]            ; BoothMultiplierDatapath:datapath|result[1]            ; clk        ; clk      ; None                        ; None                      ; 1.451 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|result[3]            ; clk        ; clk      ; None                        ; None                      ; 1.439 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 1.439 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 1.242 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; clk        ; clk      ; None                        ; None                      ; 1.091 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|temp_multiplicand[3] ; clk        ; clk      ; None                        ; None                      ; 1.091 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; clk        ; clk      ; None                        ; None                      ; 1.091 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[0]   ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; clk        ; clk      ; None                        ; None                      ; 1.091 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 1.034 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[2]   ; BoothMultiplierControlUnit:control|current_state[1]   ; clk        ; clk      ; None                        ; None                      ; 1.033 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[1]   ; BoothMultiplierControlUnit:control|current_state[2]   ; clk        ; clk      ; None                        ; None                      ; 0.678 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierDatapath:datapath|LSB                  ; BoothMultiplierDatapath:datapath|LSB                  ; clk        ; clk      ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; BoothMultiplierControlUnit:control|current_state[3]   ; BoothMultiplierControlUnit:control|current_state[3]   ; clk        ; clk      ; None                        ; None                      ; 0.454 ns                ;
++-------+------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                    ;
++-------+--------------+------------+-----------------+-------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From            ; To                                                    ; To Clock ;
++-------+--------------+------------+-----------------+-------------------------------------------------------+----------+
+; N/A   ; None         ; 5.396 ns   ; str             ; BoothMultiplierControlUnit:control|counter[1]         ; clk      ;
+; N/A   ; None         ; 5.396 ns   ; str             ; BoothMultiplierControlUnit:control|counter[2]         ; clk      ;
+; N/A   ; None         ; 5.396 ns   ; str             ; BoothMultiplierControlUnit:control|counter[0]         ; clk      ;
+; N/A   ; None         ; 4.820 ns   ; multiplier[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk      ;
+; N/A   ; None         ; 4.799 ns   ; multiplier[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk      ;
+; N/A   ; None         ; 4.490 ns   ; str             ; BoothMultiplierControlUnit:control|current_state[0]   ; clk      ;
+; N/A   ; None         ; 4.394 ns   ; str             ; BoothMultiplierControlUnit:control|current_state[3]   ; clk      ;
+; N/A   ; None         ; 4.377 ns   ; multiplier[3]   ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk      ;
+; N/A   ; None         ; 4.363 ns   ; str             ; BoothMultiplierControlUnit:control|current_state[2]   ; clk      ;
+; N/A   ; None         ; 4.241 ns   ; str             ; BoothMultiplierControlUnit:control|current_state[1]   ; clk      ;
+; N/A   ; None         ; 4.028 ns   ; multiplicand[3] ; BoothMultiplierDatapath:datapath|temp_multiplicand[3] ; clk      ;
+; N/A   ; None         ; 4.027 ns   ; multiplicand[0] ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; clk      ;
+; N/A   ; None         ; 3.909 ns   ; multiplier[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk      ;
+; N/A   ; None         ; 3.799 ns   ; multiplicand[1] ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; clk      ;
+; N/A   ; None         ; 3.741 ns   ; multiplicand[2] ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; clk      ;
++-------+--------------+------------+-----------------+-------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                              ;
++-------+--------------+------------+-----------------------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                ; To        ; From Clock ;
++-------+--------------+------------+-----------------------------------------------------+-----------+------------+
+; N/A   ; None         ; 9.669 ns   ; BoothMultiplierDatapath:datapath|new_multiplier[2]  ; result[2] ; clk        ;
+; N/A   ; None         ; 9.539 ns   ; BoothMultiplierDatapath:datapath|new_multiplier[1]  ; result[1] ; clk        ;
+; N/A   ; None         ; 7.954 ns   ; BoothMultiplierDatapath:datapath|result[1]          ; result[5] ; clk        ;
+; N/A   ; None         ; 7.718 ns   ; BoothMultiplierDatapath:datapath|result[2]          ; result[6] ; clk        ;
+; N/A   ; None         ; 7.462 ns   ; BoothMultiplierDatapath:datapath|result[3]          ; result[7] ; clk        ;
+; N/A   ; None         ; 7.364 ns   ; BoothMultiplierDatapath:datapath|new_multiplier[0]  ; result[0] ; clk        ;
+; N/A   ; None         ; 7.346 ns   ; BoothMultiplierDatapath:datapath|new_multiplier[3]  ; result[3] ; clk        ;
+; N/A   ; None         ; 7.320 ns   ; BoothMultiplierDatapath:datapath|result[0]          ; result[4] ; clk        ;
+; N/A   ; None         ; 7.087 ns   ; BoothMultiplierControlUnit:control|current_state[3] ; valid     ; clk        ;
++-------+--------------+------------+-----------------------------------------------------+-----------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                           ;
++---------------+-------------+-----------+-----------------+-------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From            ; To                                                    ; To Clock ;
++---------------+-------------+-----------+-----------------+-------------------------------------------------------+----------+
+; N/A           ; None        ; -3.493 ns ; multiplicand[2] ; BoothMultiplierDatapath:datapath|temp_multiplicand[2] ; clk      ;
+; N/A           ; None        ; -3.551 ns ; multiplicand[1] ; BoothMultiplierDatapath:datapath|temp_multiplicand[1] ; clk      ;
+; N/A           ; None        ; -3.661 ns ; multiplier[0]   ; BoothMultiplierDatapath:datapath|new_multiplier[0]    ; clk      ;
+; N/A           ; None        ; -3.779 ns ; multiplicand[0] ; BoothMultiplierDatapath:datapath|temp_multiplicand[0] ; clk      ;
+; N/A           ; None        ; -3.780 ns ; multiplicand[3] ; BoothMultiplierDatapath:datapath|temp_multiplicand[3] ; clk      ;
+; N/A           ; None        ; -3.993 ns ; str             ; BoothMultiplierControlUnit:control|current_state[1]   ; clk      ;
+; N/A           ; None        ; -4.115 ns ; str             ; BoothMultiplierControlUnit:control|current_state[2]   ; clk      ;
+; N/A           ; None        ; -4.129 ns ; multiplier[3]   ; BoothMultiplierDatapath:datapath|new_multiplier[3]    ; clk      ;
+; N/A           ; None        ; -4.146 ns ; str             ; BoothMultiplierControlUnit:control|current_state[3]   ; clk      ;
+; N/A           ; None        ; -4.242 ns ; str             ; BoothMultiplierControlUnit:control|current_state[0]   ; clk      ;
+; N/A           ; None        ; -4.302 ns ; str             ; BoothMultiplierControlUnit:control|counter[1]         ; clk      ;
+; N/A           ; None        ; -4.302 ns ; str             ; BoothMultiplierControlUnit:control|counter[2]         ; clk      ;
+; N/A           ; None        ; -4.302 ns ; str             ; BoothMultiplierControlUnit:control|counter[0]         ; clk      ;
+; N/A           ; None        ; -4.551 ns ; multiplier[1]   ; BoothMultiplierDatapath:datapath|new_multiplier[1]    ; clk      ;
+; N/A           ; None        ; -4.572 ns ; multiplier[2]   ; BoothMultiplierDatapath:datapath|new_multiplier[2]    ; clk      ;
++---------------+-------------+-----------+-----------------+-------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Sun Aug 27 03:25:27 2023
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Multiplier -c Multiplier --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 148.13 MHz between source register "BoothMultiplierDatapath:datapath|new_multiplier[2]" and destination register "BoothMultiplierDatapath:datapath|new_multiplier[0]" (period= 6.751 ns)
+    Info: + Longest register to register delay is 6.512 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y19_N15; Fanout = 5; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[2]'
+        Info: 2: + IC(0.584 ns) + CELL(0.545 ns) = 1.129 ns; Loc. = LCCOMB_X10_Y19_N10; Fanout = 8; COMB Node = 'BoothMultiplierControlUnit:control|rightMost~4'
+        Info: 3: + IC(0.344 ns) + CELL(0.545 ns) = 2.018 ns; Loc. = LCCOMB_X10_Y19_N12; Fanout = 1; COMB Node = 'BoothMultiplierControlUnit:control|LessThan1~0'
+        Info: 4: + IC(0.298 ns) + CELL(0.178 ns) = 2.494 ns; Loc. = LCCOMB_X10_Y19_N30; Fanout = 4; COMB Node = 'BoothMultiplierControlUnit:control|LessThan1~1'
+        Info: 5: + IC(0.323 ns) + CELL(0.178 ns) = 2.995 ns; Loc. = LCCOMB_X10_Y19_N26; Fanout = 9; COMB Node = 'BoothMultiplierControlUnit:control|booth_bits[1]~4'
+        Info: 6: + IC(1.505 ns) + CELL(0.322 ns) = 4.822 ns; Loc. = LCCOMB_X9_Y19_N12; Fanout = 2; COMB Node = 'BoothMultiplierDatapath:datapath|new_multiplier~32'
+        Info: 7: + IC(0.547 ns) + CELL(0.178 ns) = 5.547 ns; Loc. = LCCOMB_X10_Y19_N20; Fanout = 1; COMB Node = 'BoothMultiplierDatapath:datapath|new_multiplier~21'
+        Info: 8: + IC(0.324 ns) + CELL(0.545 ns) = 6.416 ns; Loc. = LCCOMB_X10_Y19_N0; Fanout = 1; COMB Node = 'BoothMultiplierDatapath:datapath|new_multiplier~23'
+        Info: 9: + IC(0.000 ns) + CELL(0.096 ns) = 6.512 ns; Loc. = LCFF_X10_Y19_N1; Fanout = 12; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[0]'
+        Info: Total cell delay = 2.587 ns ( 39.73 % )
+        Info: Total interconnect delay = 3.925 ns ( 60.27 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.852 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 20; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.986 ns) + CELL(0.602 ns) = 2.852 ns; Loc. = LCFF_X10_Y19_N1; Fanout = 12; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[0]'
+            Info: Total cell delay = 1.628 ns ( 57.08 % )
+            Info: Total interconnect delay = 1.224 ns ( 42.92 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.852 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 20; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.986 ns) + CELL(0.602 ns) = 2.852 ns; Loc. = LCFF_X10_Y19_N15; Fanout = 5; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[2]'
+            Info: Total cell delay = 1.628 ns ( 57.08 % )
+            Info: Total interconnect delay = 1.224 ns ( 42.92 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "BoothMultiplierControlUnit:control|counter[1]" (data pin = "str", clock pin = "clk") is 5.396 ns
+    Info: + Longest pin to register delay is 8.285 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.863 ns) = 0.863 ns; Loc. = PIN_P9; Fanout = 8; PIN Node = 'str'
+        Info: 2: + IC(5.866 ns) + CELL(0.521 ns) = 7.250 ns; Loc. = LCCOMB_X8_Y19_N24; Fanout = 3; COMB Node = 'BoothMultiplierControlUnit:control|counter[1]~11'
+        Info: 3: + IC(0.277 ns) + CELL(0.758 ns) = 8.285 ns; Loc. = LCFF_X8_Y19_N17; Fanout = 8; REG Node = 'BoothMultiplierControlUnit:control|counter[1]'
+        Info: Total cell delay = 2.142 ns ( 25.85 % )
+        Info: Total interconnect delay = 6.143 ns ( 74.15 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.851 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 20; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.985 ns) + CELL(0.602 ns) = 2.851 ns; Loc. = LCFF_X8_Y19_N17; Fanout = 8; REG Node = 'BoothMultiplierControlUnit:control|counter[1]'
+        Info: Total cell delay = 1.628 ns ( 57.10 % )
+        Info: Total interconnect delay = 1.223 ns ( 42.90 % )
+Info: tco from clock "clk" to destination pin "result[2]" through register "BoothMultiplierDatapath:datapath|new_multiplier[2]" is 9.669 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.852 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 20; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.986 ns) + CELL(0.602 ns) = 2.852 ns; Loc. = LCFF_X10_Y19_N15; Fanout = 5; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[2]'
+        Info: Total cell delay = 1.628 ns ( 57.08 % )
+        Info: Total interconnect delay = 1.224 ns ( 42.92 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 6.540 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X10_Y19_N15; Fanout = 5; REG Node = 'BoothMultiplierDatapath:datapath|new_multiplier[2]'
+        Info: 2: + IC(3.700 ns) + CELL(2.840 ns) = 6.540 ns; Loc. = PIN_G21; Fanout = 0; PIN Node = 'result[2]'
+        Info: Total cell delay = 2.840 ns ( 43.43 % )
+        Info: Total interconnect delay = 3.700 ns ( 56.57 % )
+Info: th for register "BoothMultiplierDatapath:datapath|temp_multiplicand[2]" (data pin = "multiplicand[2]", clock pin = "clk") is -3.493 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.856 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 20; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.990 ns) + CELL(0.602 ns) = 2.856 ns; Loc. = LCFF_X8_Y18_N15; Fanout = 1; REG Node = 'BoothMultiplierDatapath:datapath|temp_multiplicand[2]'
+        Info: Total cell delay = 1.628 ns ( 57.00 % )
+        Info: Total interconnect delay = 1.228 ns ( 43.00 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.635 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.834 ns) = 0.834 ns; Loc. = PIN_J2; Fanout = 1; PIN Node = 'multiplicand[2]'
+        Info: 2: + IC(5.388 ns) + CELL(0.413 ns) = 6.635 ns; Loc. = LCFF_X8_Y18_N15; Fanout = 1; REG Node = 'BoothMultiplierDatapath:datapath|temp_multiplicand[2]'
+        Info: Total cell delay = 1.247 ns ( 18.79 % )
+        Info: Total interconnect delay = 5.388 ns ( 81.21 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 209 megabytes
+    Info: Processing ended: Sun Aug 27 03:25:29 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
