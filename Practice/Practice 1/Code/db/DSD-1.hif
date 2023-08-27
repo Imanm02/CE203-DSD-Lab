@@ -1,0 +1,179 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+7
+3344
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+DSD-1
+# storage
+db|DSD-1.(0).cnf
+db|DSD-1.(0).cnf
+# case_insensitive
+# source_file
+DSD-1.bdf
+84364ec2ea79b473a3634a582a3b4fa
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+6bit_FA
+# storage
+db|DSD-1.(3).cnf
+db|DSD-1.(3).cnf
+# case_insensitive
+# source_file
+6bit_FA.bdf
+3cbdaa80b0d2af727010d782b29c19af
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+6bit_FA:inst4
+6bit_FA:inst
+2th_complement:inst3|6bit_FA:inst11
+6bit_FA:inst1
+}
+# macro_sequence
+
+# end
+# entity
+FA
+# storage
+db|DSD-1.(4).cnf
+db|DSD-1.(4).cnf
+# case_insensitive
+# source_file
+FA.bdf
+a723bd12c4fd05eb331a7a9712fcdb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+6bit_FA:inst4|FA:inst
+6bit_FA:inst4|FA:inst7
+6bit_FA:inst4|FA:inst8
+6bit_FA:inst4|FA:inst9
+6bit_FA:inst4|FA:inst10
+6bit_FA:inst4|FA:inst11
+6bit_FA:inst|FA:inst
+6bit_FA:inst|FA:inst7
+6bit_FA:inst|FA:inst8
+6bit_FA:inst|FA:inst9
+6bit_FA:inst|FA:inst10
+6bit_FA:inst|FA:inst11
+2th_complement:inst3|6bit_FA:inst11|FA:inst
+2th_complement:inst3|6bit_FA:inst11|FA:inst7
+2th_complement:inst3|6bit_FA:inst11|FA:inst8
+2th_complement:inst3|6bit_FA:inst11|FA:inst9
+2th_complement:inst3|6bit_FA:inst11|FA:inst10
+2th_complement:inst3|6bit_FA:inst11|FA:inst11
+6bit_FA:inst1|FA:inst
+6bit_FA:inst1|FA:inst7
+6bit_FA:inst1|FA:inst8
+6bit_FA:inst1|FA:inst9
+6bit_FA:inst1|FA:inst10
+6bit_FA:inst1|FA:inst11
+}
+# macro_sequence
+
+# end
+# entity
+2th_complement
+# storage
+db|DSD-1.(5).cnf
+db|DSD-1.(5).cnf
+# case_insensitive
+# source_file
+2th_complement.bdf
+2fbf14332c5917815b63f29ecc9487d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+2th_complement:inst3
+}
+# macro_sequence
+
+# end
+# entity
+Reminder11
+# storage
+db|DSD-1.(2).cnf
+db|DSD-1.(2).cnf
+# case_insensitive
+# source_file
+Reminder11.bdf
+eb2d91164b264f86caedd4f94dce98e1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+Reminder3
+# storage
+db|DSD-1.(1).cnf
+db|DSD-1.(1).cnf
+# case_insensitive
+# source_file
+Reminder3.bdf
+1c5cb2d4f51d85cd4bc1b6a0a86927e6
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Reminder3_4bit
+# storage
+db|DSD-1.(6).cnf
+db|DSD-1.(6).cnf
+# case_insensitive
+# source_file
+Reminder3_4bit.bdf
+0d8e759d3713361fce64f4c5c8590bd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# complete
+

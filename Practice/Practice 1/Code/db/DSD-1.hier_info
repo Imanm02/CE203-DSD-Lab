@@ -1,0 +1,387 @@
+|Reminder11
+R <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+D00 => 6bit_FA:inst.A0
+D01 => 6bit_FA:inst.A1
+D02 => 6bit_FA:inst.A2
+D03 => 6bit_FA:inst.A3
+D20 => 6bit_FA:inst.B0
+D21 => 6bit_FA:inst.B1
+D22 => 6bit_FA:inst.B2
+D23 => 6bit_FA:inst.B3
+D10 => 6bit_FA:inst1.A0
+D11 => 6bit_FA:inst1.A1
+D12 => 6bit_FA:inst1.A2
+D13 => 6bit_FA:inst1.A3
+D30 => 6bit_FA:inst1.B0
+D31 => 6bit_FA:inst1.B1
+D32 => 6bit_FA:inst1.B2
+D33 => 6bit_FA:inst1.B3
+
+
+|Reminder11|6bit_FA:inst4
+S0 <= FA:inst.S
+A0 => FA:inst.A
+B0 => FA:inst.B
+S1 <= FA:inst7.S
+A1 => FA:inst7.A
+B1 => FA:inst7.B
+S2 <= FA:inst8.S
+A2 => FA:inst8.A
+B2 => FA:inst8.B
+S3 <= FA:inst9.S
+A3 => FA:inst9.A
+B3 => FA:inst9.B
+S4 <= FA:inst10.S
+A4 => FA:inst10.A
+B4 => FA:inst10.B
+S5 <= FA:inst11.S
+A5 => FA:inst11.A
+B5 => FA:inst11.B
+C_out <= FA:inst11.C_out
+
+
+|Reminder11|6bit_FA:inst4|FA:inst
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst4|FA:inst7
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst4|FA:inst8
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst4|FA:inst9
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst4|FA:inst10
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst4|FA:inst11
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst
+S0 <= FA:inst.S
+A0 => FA:inst.A
+B0 => FA:inst.B
+S1 <= FA:inst7.S
+A1 => FA:inst7.A
+B1 => FA:inst7.B
+S2 <= FA:inst8.S
+A2 => FA:inst8.A
+B2 => FA:inst8.B
+S3 <= FA:inst9.S
+A3 => FA:inst9.A
+B3 => FA:inst9.B
+S4 <= FA:inst10.S
+A4 => FA:inst10.A
+B4 => FA:inst10.B
+S5 <= FA:inst11.S
+A5 => FA:inst11.A
+B5 => FA:inst11.B
+C_out <= FA:inst11.C_out
+
+
+|Reminder11|6bit_FA:inst|FA:inst
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst|FA:inst7
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst|FA:inst8
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst|FA:inst9
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst|FA:inst10
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst|FA:inst11
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3
+pin_name14 <= 6bit_FA:inst11.S0
+pin_name => inst.IN0
+pin_name1 => inst6.IN0
+pin_name2 => inst7.IN0
+pin_name3 => inst8.IN0
+pin_name4 => inst9.IN0
+pin_name5 => inst10.IN0
+pin_name15 <= 6bit_FA:inst11.S1
+pin_name16 <= 6bit_FA:inst11.S2
+pin_name17 <= 6bit_FA:inst11.S3
+pin_name18 <= 6bit_FA:inst11.S4
+pin_name19 <= 6bit_FA:inst11.S5
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11
+S0 <= FA:inst.S
+A0 => FA:inst.A
+B0 => FA:inst.B
+S1 <= FA:inst7.S
+A1 => FA:inst7.A
+B1 => FA:inst7.B
+S2 <= FA:inst8.S
+A2 => FA:inst8.A
+B2 => FA:inst8.B
+S3 <= FA:inst9.S
+A3 => FA:inst9.A
+B3 => FA:inst9.B
+S4 <= FA:inst10.S
+A4 => FA:inst10.A
+B4 => FA:inst10.B
+S5 <= FA:inst11.S
+A5 => FA:inst11.A
+B5 => FA:inst11.B
+C_out <= FA:inst11.C_out
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst7
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst8
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst9
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst10
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|2th_complement:inst3|6bit_FA:inst11|FA:inst11
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1
+S0 <= FA:inst.S
+A0 => FA:inst.A
+B0 => FA:inst.B
+S1 <= FA:inst7.S
+A1 => FA:inst7.A
+B1 => FA:inst7.B
+S2 <= FA:inst8.S
+A2 => FA:inst8.A
+B2 => FA:inst8.B
+S3 <= FA:inst9.S
+A3 => FA:inst9.A
+B3 => FA:inst9.B
+S4 <= FA:inst10.S
+A4 => FA:inst10.A
+B4 => FA:inst10.B
+S5 <= FA:inst11.S
+A5 => FA:inst11.A
+B5 => FA:inst11.B
+C_out <= FA:inst11.C_out
+
+
+|Reminder11|6bit_FA:inst1|FA:inst
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1|FA:inst7
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1|FA:inst8
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1|FA:inst9
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1|FA:inst10
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reminder11|6bit_FA:inst1|FA:inst11
+C_out <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst6.IN0
+B => inst.IN1
+B => inst6.IN1
+C_in => inst4.IN1
+C_in => inst7.IN1
+S <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+
+
