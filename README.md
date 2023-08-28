@@ -22,3 +22,5 @@ The "Instructions" folder contains any additional course materials used in the l
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
+- [AmirMahdi Kousheshi](https://github.com/amkamir82)
+- [Shayan Salehi](https://github.com/ShayanSalehi81)
