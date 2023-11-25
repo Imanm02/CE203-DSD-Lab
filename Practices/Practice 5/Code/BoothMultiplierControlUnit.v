@@ -29,7 +29,6 @@ module BoothMultiplierControlUnit(
             next_state[3] <= 1'b1;
     end
 
-
     always @(posedge clk) begin
         if (str) begin
             current_state <= 1;
