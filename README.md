@@ -3,7 +3,7 @@ Solutions to Dr. Ejlali's CE203: Digital Systems Design-Lab (Sharif University o
 
 ## Overview
 
-This repository contains solutions to the practices, course instructions, and other useful resources for the CE203: Digital System Design Lab course at Sharif University of Technology, Summer 2023, taught by Dr. Ejlali.
+This repository contains course instructions, solutions to the practices, and other useful resources for the CE203: Digital System Design Lab course at Sharif University of Technology, Summer 2023, taught by Dr. Ejlali.
 
 ## Table of Contents
 
