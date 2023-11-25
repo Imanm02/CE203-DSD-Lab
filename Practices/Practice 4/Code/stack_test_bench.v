@@ -1,5 +1,4 @@
 module stack_tb();
-
 	reg         clk = 0, reset = 0, push = 0, pop = 0;
 	reg [3:0]   data_in;
 	wire        full, empty;
