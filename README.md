@@ -18,7 +18,7 @@ The "Practices" folder contains the solutions to the practices that were given d
 
 ## Instructions
 
-The "Instructions" folder contains any additional course materials used in the lectures or practices.
+The "Instructions" folder contains any additional course materials used in the practices.
 
 ## Maintainer
 
