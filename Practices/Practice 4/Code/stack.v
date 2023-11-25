@@ -20,4 +20,5 @@ module stack(input Clk, input RstN, input [3:0] Data_In, input Push, input Pop, 
 		Full = ~|(pointer ^ 8);
 		Empty = ~|pointer;
 	end
+	
 endmodule
