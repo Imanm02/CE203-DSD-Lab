@@ -6,8 +6,9 @@ module sequential_comparator (
     output o_gt,
     output o_lt
 );
+
     wire o_gt_not, o_lt_not, i_gt, i_lt;
-    
+
     // Create the flip flops
     assign o_gt = ~(o_gt_not & ~(i_gt & clk));
     assign o_gt_not = ~(o_gt & ~(~i_gt & clk));
