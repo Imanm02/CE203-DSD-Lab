@@ -15,5 +15,4 @@ one_bit_comparator comp1(x[2], y[2], o_gt_comps[0], o_eq_comps[0], o_gt_comps[1]
 one_bit_comparator comp2(x[1], y[1], o_gt_comps[1], o_eq_comps[1], o_gt_comps[2], o_eq_comps[2]);
 one_bit_comparator comp3(x[0], y[0], o_gt_comps[2], o_eq_comps[2], o_gt, o_eq);
 
-
 endmodule 
