@@ -8,7 +8,7 @@ This repository contains solutions to the practices, course instructions, and ot
 ## Table of Contents
 
 - [Overview](#overview)
-- [Practice](#practice)
+- [Practices](#practices)
 - [Instructions](#instructions)
 - [Maintainer](#Maintainer)
 
