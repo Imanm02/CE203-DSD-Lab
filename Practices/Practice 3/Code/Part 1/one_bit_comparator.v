@@ -6,6 +6,7 @@ module one_bit_comparator(
     o_gt, 
     o_eq
 );
+
 input x, y, in_gt, in_eq;
 output o_eq, o_gt; 
 
