@@ -5,7 +5,6 @@ module stack_tb();
 	wire        full, empty;
 	wire [3:0]  data_out;
 
-
 stack st(
     .Clk(clk),
     .RstN(reset),
