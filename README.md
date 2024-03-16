@@ -10,7 +10,7 @@ This repository contains course instructions, solutions to the practices, and ot
 - [Overview](#overview)
 - [Practices](#practices)
 - [Instructions](#instructions)
-- [Maintainer](#Maintainer)
+- [Maintainers](#Maintainers)
 
 ## Practices
 
@@ -20,7 +20,7 @@ The "Practices" folder contains the solutions to the practices that were given d
 
 The "Instructions" folder contains any additional course materials used in the practices.
 
-## Maintainer
+## Maintainers
 
 - [Iman Mohammadi](https://github.com/Imanm02)
 - [AmirMahdi Kousheshi](https://github.com/amkamir82)
